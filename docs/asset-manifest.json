@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/react-cursor/static/css/main.bf348205.chunk.css",
-    "main.js": "/react-cursor/static/js/main.5148446b.chunk.js",
-    "main.js.map": "/react-cursor/static/js/main.5148446b.chunk.js.map",
-    "runtime-main.js": "/react-cursor/static/js/runtime-main.1a1f8f69.js",
-    "runtime-main.js.map": "/react-cursor/static/js/runtime-main.1a1f8f69.js.map",
-    "static/js/2.532cc37d.chunk.js": "/react-cursor/static/js/2.532cc37d.chunk.js",
-    "static/js/2.532cc37d.chunk.js.map": "/react-cursor/static/js/2.532cc37d.chunk.js.map",
-    "index.html": "/react-cursor/index.html",
-    "precache-manifest.bfb1674faefd411ebe24038952912182.js": "/react-cursor/precache-manifest.bfb1674faefd411ebe24038952912182.js",
-    "service-worker.js": "/react-cursor/service-worker.js",
-    "static/css/main.bf348205.chunk.css.map": "/react-cursor/static/css/main.bf348205.chunk.css.map",
-    "static/js/2.532cc37d.chunk.js.LICENSE.txt": "/react-cursor/static/js/2.532cc37d.chunk.js.LICENSE.txt"
+    "main.css": "/react-cursor-custom/static/css/main.bf348205.chunk.css",
+    "main.js": "/react-cursor-custom/static/js/main.5148446b.chunk.js",
+    "main.js.map": "/react-cursor-custom/static/js/main.5148446b.chunk.js.map",
+    "runtime-main.js": "/react-cursor-custom/static/js/runtime-main.fa1751a8.js",
+    "runtime-main.js.map": "/react-cursor-custom/static/js/runtime-main.fa1751a8.js.map",
+    "static/js/2.e633979e.chunk.js": "/react-cursor-custom/static/js/2.e633979e.chunk.js",
+    "static/js/2.e633979e.chunk.js.map": "/react-cursor-custom/static/js/2.e633979e.chunk.js.map",
+    "index.html": "/react-cursor-custom/index.html",
+    "precache-manifest.eaac3e86e484953ef1cd08cb0156fcef.js": "/react-cursor-custom/precache-manifest.eaac3e86e484953ef1cd08cb0156fcef.js",
+    "service-worker.js": "/react-cursor-custom/service-worker.js",
+    "static/css/main.bf348205.chunk.css.map": "/react-cursor-custom/static/css/main.bf348205.chunk.css.map",
+    "static/js/2.e633979e.chunk.js.LICENSE.txt": "/react-cursor-custom/static/js/2.e633979e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1a1f8f69.js",
-    "static/js/2.532cc37d.chunk.js",
+    "static/js/runtime-main.fa1751a8.js",
+    "static/js/2.e633979e.chunk.js",
     "static/css/main.bf348205.chunk.css",
     "static/js/main.5148446b.chunk.js"
   ]

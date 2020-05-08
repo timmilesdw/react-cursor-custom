@@ -14,8 +14,18 @@ function _taggedTemplateLiteralLoose(strings, raw) {
   return strings;
 }
 
+function _templateObject3() {
+  var data = _taggedTemplateLiteralLoose(["\n  width: ", ";\n  height: ", ";\n  border-radius: 100%;\n  border: ", ";\n  transition: ", ";\n  pointer-events: none;\n  transform: translate(-50%, -50%);\n  z-index: 999;\n  position: absolute;\n  mix-blend-mode: ", ";\n  display: ", ";\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2() {
-  var data = _taggedTemplateLiteralLoose(["\n    width: ", ";\n    height: ", ";\n    border-radius: 100%;\n    border: ", ";\n    transition: ", ";\n    pointer-events: none;\n    transform: translate(-50%, -50%);\n    z-index: 999;\n    position: absolute;\n    mix-blend-mode: ", ";\n    display: ", "\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  width: ", ";\n  height: ", ";\n  position: absolute;\n  transform: translate(-50%, -50%);\n  background: ", ";\n  z-index: 999;\n  border-radius: 100%;\n  pointer-events: none;\n  overflow: auto;\n  mix-blend-mode: ", ";\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -25,7 +35,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n    width: ", ";\n    height: ", ";\n    position: absolute;\n    transform: translate(-50%, -50%);\n    background: ", ";\n    z-index: 999;\n    border-radius: 100%;\n    pointer-events: none;\n    overflow: auto;\n    mix-blend-mode: ", "\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  pointer-events: none;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -42,7 +52,7 @@ var Cursor = function Cursor(_ref) {
       dotSize = _ref.dotSize,
       ringSize = _ref.ringSize,
       transitionTime = _ref.transitionTime;
-  return /*#__PURE__*/React__default.createElement("div", null, /*#__PURE__*/React__default.createElement(CursorDot, {
+  return /*#__PURE__*/React__default.createElement(CursorWrapper, null, /*#__PURE__*/React__default.createElement(CursorDot, {
     color: color,
     mixBlend: mixBlend,
     dotSize: dotSize,
@@ -58,16 +68,17 @@ var Cursor = function Cursor(_ref) {
     y: y
   }));
 };
+var CursorWrapper = styled__default.div(_templateObject());
 var CursorDot = styled__default.div.attrs(function (props) {
   return {
     style: {
       transform: "translate(" + props.x + "px, " + props.y + "px)"
     }
   };
-})(_templateObject(), function (props) {
-  return props.dotSize ? props.dotSize + "px" : '8px';
+})(_templateObject2(), function (props) {
+  return props.dotSize ? props.dotSize + 'px' : '8px';
 }, function (props) {
-  return props.dotSize ? props.dotSize + "px" : '8px';
+  return props.dotSize ? props.dotSize + 'px' : '8px';
 }, function (props) {
   return props.color ? props.color : 'black';
 }, function (props) {
@@ -79,10 +90,10 @@ var CursorRing = styled__default.div.attrs(function (props) {
       transform: "translate(" + (props.x - props.ringSize / 2.2) + "px, " + (props.y - props.ringSize / 2.2) + "px)"
     }
   };
-})(_templateObject2(), function (props) {
-  return props.ringSize ? props.ringSize + "px" : '36px';
+})(_templateObject3(), function (props) {
+  return props.ringSize ? props.ringSize + 'px' : '36px';
 }, function (props) {
-  return props.ringSize ? props.ringSize + "px" : '36px';
+  return props.ringSize ? props.ringSize + 'px' : '36px';
 }, function (props) {
   return props.color ? "2px solid " + props.color : '2px solid black';
 }, function (props) {
@@ -147,7 +158,7 @@ var CursorProvider = function CursorProvider(_ref) {
       visibility = _useState2[0],
       setVisibility = _useState2[1];
 
-  return /*#__PURE__*/React__default.createElement(CursorWrapper, {
+  return /*#__PURE__*/React__default.createElement(CursorWrapper$1, {
     onMouseMove: function onMouseMove(e) {
       return setCursor({
         x: e.pageX,
@@ -163,7 +174,7 @@ var CursorProvider = function CursorProvider(_ref) {
     y: cursor.y
   }) : null, children);
 };
-var CursorWrapper = styled__default.div(_templateObject$1());
+var CursorWrapper$1 = styled__default.div(_templateObject$1());
 var GlobalStyle = styled.createGlobalStyle(_templateObject2$1());
 
 exports.CursorProvider = CursorProvider;

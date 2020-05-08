@@ -1,11 +1,11 @@
 {
   "name": "react-cursor-example",
-  "homepage": "https://timmilesdw.github.io/react-cursor-custom",
+  "homepage": "./",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
     "react": "link:../node_modules/react",
-    "react-cursor": "link:..",
+    "react-cursor-custom": "link:..",
     "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "link:../node_modules/react-scripts",
     "styled-components": "^5.1.0"

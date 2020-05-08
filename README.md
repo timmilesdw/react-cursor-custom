@@ -3,7 +3,7 @@
 > Made with create-react-library
 
 [![NPM](https://img.shields.io/npm/v/react-cursor-custom.svg)](https://www.npmjs.com/package/react-cursor-custom) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
+## [Live Example](https://timmilesdw.github.io/react-cursor-custom/)
 ## Install
 
 ```bash

@@ -1,0 +1,166 @@
+import React, { useEffect, useState } from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
+
+function _taggedTemplateLiteralLoose(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
+  }
+
+  strings.raw = raw;
+  return strings;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteralLoose(["\n    width: ", ";\n    height: ", ";\n    border-radius: 100%;\n    border: ", ";\n    transition: ", ";\n    pointer-events: none;\n    transform: translate(-50%, -50%);\n    z-index: 999;\n    position: absolute;\n    mix-blend-mode: ", ";\n    display: ", "\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteralLoose(["\n    width: ", ";\n    height: ", ";\n    position: absolute;\n    transform: translate(-50%, -50%);\n    background: ", ";\n    z-index: 999;\n    border-radius: 100%;\n    pointer-events: none;\n    overflow: auto;\n    mix-blend-mode: ", "\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var Cursor = function Cursor(_ref) {
+  var x = _ref.x,
+      y = _ref.y,
+      color = _ref.color,
+      noRing = _ref.noRing,
+      mixBlend = _ref.mixBlend,
+      dotSize = _ref.dotSize,
+      ringSize = _ref.ringSize,
+      transitionTime = _ref.transitionTime;
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(CursorDot, {
+    color: color,
+    mixBlend: mixBlend,
+    dotSize: dotSize,
+    x: x,
+    y: y
+  }), /*#__PURE__*/React.createElement(CursorRing, {
+    noRing: noRing,
+    color: color,
+    mixBlend: mixBlend,
+    transitionTime: transitionTime,
+    ringSize: ringSize,
+    x: x,
+    y: y
+  }));
+};
+var CursorDot = styled.div.attrs(function (props) {
+  return {
+    style: {
+      transform: "translate(" + props.x + "px, " + props.y + "px)"
+    }
+  };
+})(_templateObject(), function (props) {
+  return props.dotSize ? props.dotSize + "px" : '8px';
+}, function (props) {
+  return props.dotSize ? props.dotSize + "px" : '8px';
+}, function (props) {
+  return props.color ? props.color : 'black';
+}, function (props) {
+  return props.mixBlend ? 'difference' : 'none';
+});
+var CursorRing = styled.div.attrs(function (props) {
+  return {
+    style: {
+      transform: "translate(" + (props.x - props.ringSize / 2.2) + "px, " + (props.y - props.ringSize / 2.2) + "px)"
+    }
+  };
+})(_templateObject2(), function (props) {
+  return props.ringSize ? props.ringSize + "px" : '36px';
+}, function (props) {
+  return props.ringSize ? props.ringSize + "px" : '36px';
+}, function (props) {
+  return props.color ? "2px solid " + props.color : '2px solid black';
+}, function (props) {
+  return props.transitionTime ? "transform " + props.transitionTime + "ms ease-out" : 'transform 0.1s ease-out';
+}, function (props) {
+  return props.mixBlend ? 'difference' : 'none';
+}, function (props) {
+  return props.noRing ? 'none' : 'block';
+});
+
+function _templateObject2$1() {
+  var data = _taggedTemplateLiteralLoose(["\n* {\n    cursor: none !important;\n}\n"]);
+
+  _templateObject2$1 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$1() {
+  var data = _taggedTemplateLiteralLoose(["\n    position: fixed;\n    width: 100vw;\n    height: 100vh;\n    z-index: 999;\n"]);
+
+  _templateObject$1 = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var CursorProvider = function CursorProvider(_ref) {
+  var children = _ref.children,
+      color = _ref.color,
+      noRing = _ref.noRing,
+      ringSize = _ref.ringSize,
+      transitionTime = _ref.transitionTime;
+  useEffect(function () {
+    {
+      window.innerWidth < 600 ? setVisibility(false) : setVisibility(true);
+    }
+    {
+      cursor.x > window.innerWidth ? setCursor({
+        x: x--,
+        y: y
+      }) : null;
+    }
+    {
+      cursor.y > window.innerHeight ? setCursor({
+        x: x,
+        y: y--
+      }) : null;
+    }
+  });
+
+  var _useState = useState({
+    x: 0,
+    y: 0
+  }),
+      cursor = _useState[0],
+      setCursor = _useState[1];
+
+  var _useState2 = useState(true),
+      visibility = _useState2[0],
+      setVisibility = _useState2[1];
+
+  return /*#__PURE__*/React.createElement(CursorWrapper, {
+    onMouseMove: function onMouseMove(e) {
+      return setCursor({
+        x: e.pageX,
+        y: e.pageY
+      });
+    }
+  }, /*#__PURE__*/React.createElement(GlobalStyle, null), visibility ? /*#__PURE__*/React.createElement(Cursor, {
+    color: color,
+    noRing: noRing,
+    ringSize: ringSize,
+    transitionTime: transitionTime,
+    x: cursor.x,
+    y: cursor.y
+  }) : null, children);
+};
+var CursorWrapper = styled.div(_templateObject$1());
+var GlobalStyle = createGlobalStyle(_templateObject2$1());
+
+export { CursorProvider };
+//# sourceMappingURL=index.modern.js.map

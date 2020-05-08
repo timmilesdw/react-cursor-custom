@@ -42,7 +42,7 @@ const App = () => {
         </Controls>
         <Controls>
           <div>Ring Size</div>
-          <div>noRing prop :number</div>
+          <div>ringSize prop :number</div>
           <input type="number"
           value={ringSize}
           onChange={e => setRingSize(e.target.value)}

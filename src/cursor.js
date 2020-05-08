@@ -11,7 +11,7 @@ export const Cursor = ({
   transitionTime
 }) => {
   return (
-    <CursorWrapper>
+    <div>
       <CursorDot
         color={color}
         mixBlend={mixBlend}
@@ -28,12 +28,10 @@ export const Cursor = ({
         x={x}
         y={y}
       />
-    </CursorWrapper>
+    </div>
   )
 }
-const CursorWrapper = styled.div`
-  pointer-events: none;
-`
+
 const CursorDot = styled.div.attrs((props) => ({
   style: {
     transform: `translate(${props.x}px, ${props.y}px)`

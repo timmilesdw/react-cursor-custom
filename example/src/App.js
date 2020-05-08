@@ -74,4 +74,5 @@ const Controls = styled.div`
 const Text = styled.div`
   font-size: 36px;
   text-align: center;
+  pointer-events: none;
 `

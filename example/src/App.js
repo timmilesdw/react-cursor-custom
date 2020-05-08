@@ -62,7 +62,7 @@ export default App;
 const ControlsWrapper = styled.div`
   width: 1000px;
   display: flex;
-  margin: 10% auto;
+  margin: auto;
   justify-content: space-around;
 `
 

@@ -16,6 +16,7 @@ const App = () => {
                     ringSize={ringSize}
                     transitionTime={transition}>
       <Text>Simple React Custom Cursor Component<br/>No lags is achieved by using transform property, which is rendered by GPU, not CPU<br/>You can play with props in the form under</Text>
+      
       <ControlsWrapper>
         <Controls>
           <div>Color</div>
@@ -49,8 +50,8 @@ const App = () => {
           placeholder="Type size of the ring"
           />
         </Controls>
-        
       </ControlsWrapper>
+
     </CursorProvider>
   )
 }

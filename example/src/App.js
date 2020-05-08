@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { CursorProvider } from 'react-cursor'
+import { CursorProvider } from 'react-cursor-custom'
 
 import styled from 'styled-components'
 
@@ -30,7 +30,7 @@ const App = () => {
         <Controls>
           <div>Transition in ms</div>
           <div>transitionTime prop :number</div>
-          <input type="number"
+          <input
           value={transition}
           onChange={e => setTransition(e.target.value)}
           placeholder="Type transition duration in ms"
@@ -44,7 +44,7 @@ const App = () => {
         <Controls>
           <div>Ring Size</div>
           <div>ringSize prop :number</div>
-          <input type="number"
+          <input
           value={ringSize}
           onChange={e => setRingSize(e.target.value)}
           placeholder="Type size of the ring"

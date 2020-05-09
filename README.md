@@ -30,8 +30,8 @@ import { CursorProvider } from 'react-cursor-custom'
 const App = () => {
   return (
     <CursorProvider>
-      <YouMainComponent/>
-    <CursorProvide/>
+      <YourMainComponent/>
+    <CursorProvider/>
   )
 }
 ```

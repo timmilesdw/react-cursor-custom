@@ -124,16 +124,7 @@ var CursorProvider = function CursorProvider(_ref) {
       transitionTime = _ref.transitionTime;
   useEffect(function () {
     {
-      cursor.x > window.innerWidth ? setCursor({
-        x: x - 1,
-        y: y
-      }) : null;
-    }
-    {
-      cursor.y > window.innerHeight ? setCursor({
-        x: x,
-        y: y - 1
-      }) : null;
+      cursor.x > window.innerWidth ? setVisibility(false) : null;
     }
     {
       detectMob(toMatch) ? setVisibility(false) : setVisibility(true);
@@ -151,6 +142,7 @@ var CursorProvider = function CursorProvider(_ref) {
       visibility = _useState2[0],
       setVisibility = _useState2[1];
 
+  setVisibility(false);
   return /*#__PURE__*/React.createElement(CursorWrapper, {
     onMouseMove: function onMouseMove(e) {
       return setCursor({

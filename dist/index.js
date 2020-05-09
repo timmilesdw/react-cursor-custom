@@ -112,6 +112,14 @@ function _templateObject$1() {
 
   return data;
 }
+var toMatch = [/Android/i, /webOS/i, /iPhone/i, /iPad/i, /iPod/i, /BlackBerry/i, /Windows Phone/i];
+
+var detectMob = function detectMob(match) {
+  return match.some(function (match) {
+    return navigator.userAgent.match(match);
+  });
+};
+
 var CursorProvider = function CursorProvider(_ref) {
   var children = _ref.children,
       color = _ref.color,
@@ -120,19 +128,19 @@ var CursorProvider = function CursorProvider(_ref) {
       transitionTime = _ref.transitionTime;
   React.useEffect(function () {
     {
-      window.innerWidth < 600 ? setVisibility(false) : setVisibility(true);
-    }
-    {
       cursor.x > window.innerWidth ? setCursor({
-        x: x--,
+        x: x - 1,
         y: y
       }) : null;
     }
     {
       cursor.y > window.innerHeight ? setCursor({
         x: x,
-        y: y--
+        y: y - 1
       }) : null;
+    }
+    {
+      detectMob(toMatch) ? setVisibility(false) : setVisibility(true);
     }
   });
 

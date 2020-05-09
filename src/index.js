@@ -2,13 +2,31 @@ import React, { useState, useEffect } from 'react'
 import styled, {createGlobalStyle} from 'styled-components'
 import { Cursor } from './cursor'
 
+const toMatch = [
+    /Android/i,
+    /webOS/i,
+    /iPhone/i,
+    /iPad/i,
+    /iPod/i,
+    /BlackBerry/i,
+    /Windows Phone/i
+];
+
+const detectMob = (match) => {
+    return match.some((match) => {
+        return navigator.userAgent.match(match);
+    });
+}
+
 export const CursorProvider = ({ children, color, noRing, mixBlend, dotSize, ringSize, transitionTime }) => {
     useEffect(() => {
-        { window.innerWidth < 600 ? setVisibility(false) : setVisibility(true) }
         { cursor.x > window.innerWidth ? setCursor({x: x - 1, y: y}) : null }
         { cursor.y > window.innerHeight ? setCursor({x: x, y: y - 1}) : null }
+        { detectMob(toMatch) ? setVisibility(false) : setVisibility(true) }
     })
     
+    
+
     const [cursor, setCursor] = useState({x: 0, y: 0})
     const [visibility, setVisibility] = useState(true)
 

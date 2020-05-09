@@ -60,10 +60,11 @@ export default App;
 
 
 const ControlsWrapper = styled.div`
-  width: 1000px;
+  width: 70%;
   display: flex;
-  margin: auto;
+  margin: 0 auto;
   justify-content: space-around;
+  flex-wrap: wrap;
 `
 
 const Controls = styled.div`
@@ -71,9 +72,10 @@ const Controls = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  width: 50%
 `
 const Text = styled.div`
   font-size: 36px;
   text-align: center;
-  height: 500px;
+  height: 300px;
 `

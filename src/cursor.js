@@ -10,6 +10,9 @@ export const Cursor = ({
   ringSize,
   transitionTime
 }) => {
+  
+  
+  
   return (
     <div>
       <CursorDot

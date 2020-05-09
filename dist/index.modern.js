@@ -72,7 +72,7 @@ var CursorDot = styled.div.attrs(function (props) {
 var CursorRing = styled.div.attrs(function (props) {
   return {
     style: {
-      transform: "translate(" + (props.x - props.ringSize / 2.2) + "px, " + (props.y - props.ringSize / 2.2) + "px)"
+      transform: "translate(" + (props.x - props.ringSize / 2.25) + "px, " + (props.y - props.ringSize / 2.25) + "px)"
     }
   };
 })(_templateObject2(), function (props) {

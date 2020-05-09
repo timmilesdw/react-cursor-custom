@@ -1,7 +1,7 @@
 {
   "name": "react-cursor-custom",
-  "version": "1.0.0",
-  "description": "Made with create-react-library",
+  "version": "1.1.1",
+  "description": "Custom cursor react component",
   "author": "timmilesdw",
   "license": "MIT",
   "repository": "timmilesdw/react-cursor-custom",
@@ -52,8 +52,5 @@
   },
   "files": [
     "dist"
-  ],
-  "dependencies": {
-    "@quickbaseoss/babel-plugin-styled-components-css-namespace": "^1.0.0-rc4"
-  }
+  ]
 }

@@ -9,7 +9,7 @@
 
 ![React Custom Cursor Demo](example/cursor.gif)
 
-## Install
+## Installation
 
 ```bash
 npm install --save react-cursor

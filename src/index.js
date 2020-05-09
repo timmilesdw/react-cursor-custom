@@ -5,8 +5,8 @@ import { Cursor } from './cursor'
 export const CursorProvider = ({ children, color, noRing, mixBlend, dotSize, ringSize, transitionTime }) => {
     useEffect(() => {
         { window.innerWidth < 600 ? setVisibility(false) : setVisibility(true) }
-        { cursor.x > window.innerWidth ? setCursor({x: x--, y: y}) : null }
-        { cursor.y > window.innerHeight ? setCursor({x: x, y: y--}) : null }
+        { cursor.x > window.innerWidth ? setCursor({x: x - 1, y: y}) : null }
+        { cursor.y > window.innerHeight ? setCursor({x: x, y: y - 1}) : null }
     })
     
     const [cursor, setCursor] = useState({x: 0, y: 0})

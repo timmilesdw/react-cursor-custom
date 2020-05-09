@@ -104,7 +104,7 @@ function _templateObject2$1() {
 }
 
 function _templateObject$1() {
-  var data = _taggedTemplateLiteralLoose(["\n    position: fixed;\n    width: 100vw;\n    height: 100vh;\n    z-index: 999;\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n    width: 100%;\n    min-height: 100vh;\n"]);
 
   _templateObject$1 = function _templateObject() {
     return data;
@@ -127,12 +127,7 @@ var CursorProvider = function CursorProvider(_ref) {
       ringSize = _ref.ringSize,
       transitionTime = _ref.transitionTime;
   React.useEffect(function () {
-    {
-      cursor.x > window.innerWidth ? setVisibility(false) : null;
-    }
-    {
-      detectMob(toMatch) ? setVisibility(false) : setVisibility(true);
-    }
+    detectMob(toMatch) ? setVisibility(false) : setVisibility(true);
   });
 
   var _useState = React.useState({
@@ -146,8 +141,8 @@ var CursorProvider = function CursorProvider(_ref) {
       visibility = _useState2[0],
       setVisibility = _useState2[1];
 
-  setVisibility(false);
   return /*#__PURE__*/React__default.createElement(CursorWrapper, {
+    onMouseOut: console.log('kek'),
     onMouseMove: function onMouseMove(e) {
       return setCursor({
         x: e.pageX,

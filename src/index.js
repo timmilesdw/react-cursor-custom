@@ -18,7 +18,7 @@ const detectMob = (match) => {
     });
 }
 
-export const CursorProvider = ({ children, color, noRing, mixBlend, dotSize, ringSize, transitionTime }) => {
+export const CursorProvider = ({ children, color, noRing, ringSize, transitionTime }) => {
     useEffect(() => {
         detectMob(toMatch) ? setVisibility(false) : setVisibility(true)
     })

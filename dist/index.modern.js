@@ -100,7 +100,7 @@ function _templateObject2$1() {
 }
 
 function _templateObject$1() {
-  var data = _taggedTemplateLiteralLoose(["\n    width: 100%;\n    min-height: 100vh;\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n    width: 100%;\n    height: 100%;\n"]);
 
   _templateObject$1 = function _templateObject() {
     return data;
@@ -138,7 +138,6 @@ var CursorProvider = function CursorProvider(_ref) {
       setVisibility = _useState2[1];
 
   return /*#__PURE__*/React.createElement(CursorWrapper, {
-    onMouseOut: console.log('kek'),
     onMouseMove: function onMouseMove(e) {
       return setCursor({
         x: e.pageX,

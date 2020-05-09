@@ -27,7 +27,7 @@ export const CursorProvider = ({ children, color, noRing, mixBlend, dotSize, rin
     const [visibility, setVisibility] = useState(true)
     
     return (
-    <CursorWrapper onMouseOut={console.log('kek')} onMouseMove={(e) => setCursor({x: e.pageX, y: e.pageY})}>
+    <CursorWrapper onMouseMove={(e) => setCursor({x: e.pageX, y: e.pageY})}>
         <GlobalStyle/>
         {visibility ? 
             <Cursor 
@@ -44,7 +44,7 @@ export const CursorProvider = ({ children, color, noRing, mixBlend, dotSize, rin
 
 const CursorWrapper = styled.div`
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
 `
 const GlobalStyle = createGlobalStyle`
 * {

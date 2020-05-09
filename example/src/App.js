@@ -68,7 +68,6 @@ const App = () => {
 
 export default App;
 
-
 const ControlsWrapper = styled.div`
   width: 70%;
   display: flex;
@@ -82,7 +81,7 @@ const Controls = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  width: 50%
+  width: 50%;
 `
 const Text = styled.div`
   font-size: 36px;

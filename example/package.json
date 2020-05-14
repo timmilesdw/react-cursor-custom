@@ -8,8 +8,7 @@
     "react-cursor-custom": "link:..",
     "react-custom-cursor": "^0.1.1",
     "react-dom": "link:../node_modules/react-dom",
-    "react-scripts": "link:../node_modules/react-scripts",
-    "styled-components": "^5.1.0"
+    "react-scripts": "link:../node_modules/react-scripts"
   },
   "scripts": {
     "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",

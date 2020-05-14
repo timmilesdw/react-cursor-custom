@@ -72,7 +72,7 @@ var CursorDot = styled.div.attrs(function (props) {
 var CursorRing = styled.div.attrs(function (props) {
   return {
     style: {
-      transform: "translate(" + (props.x - props.ringSize / 2.2) + "px, " + (props.y - props.ringSize / 2.2) + "px)"
+      transform: "translate(" + (props.x - props.ringSize / 2.25) + "px, " + (props.y - props.ringSize / 2.25) + "px)"
     }
   };
 })(_templateObject2(), function (props) {
@@ -100,7 +100,7 @@ function _templateObject2$1() {
 }
 
 function _templateObject$1() {
-  var data = _taggedTemplateLiteralLoose(["\n    position: fixed;\n    width: 100vw;\n    height: 100vh;\n    z-index: 999;\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n    width: 100%;\n    height: 100%;\n"]);
 
   _templateObject$1 = function _templateObject() {
     return data;
@@ -108,6 +108,14 @@ function _templateObject$1() {
 
   return data;
 }
+var toMatch = [/Android/i, /webOS/i, /iPhone/i, /iPad/i, /iPod/i, /BlackBerry/i, /Windows Phone/i];
+
+var detectMob = function detectMob(match) {
+  return match.some(function (match) {
+    return navigator.userAgent.match(match);
+  });
+};
+
 var CursorProvider = function CursorProvider(_ref) {
   var children = _ref.children,
       color = _ref.color,
@@ -115,21 +123,7 @@ var CursorProvider = function CursorProvider(_ref) {
       ringSize = _ref.ringSize,
       transitionTime = _ref.transitionTime;
   useEffect(function () {
-    {
-      window.innerWidth < 600 ? setVisibility(false) : setVisibility(true);
-    }
-    {
-      cursor.x > window.innerWidth ? setCursor({
-        x: x--,
-        y: y
-      }) : null;
-    }
-    {
-      cursor.y > window.innerHeight ? setCursor({
-        x: x,
-        y: y--
-      }) : null;
-    }
+    detectMob(toMatch) ? setVisibility(false) : setVisibility(true);
   });
 
   var _useState = useState({

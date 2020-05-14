@@ -10,6 +10,9 @@ export const Cursor = ({
   ringSize,
   transitionTime
 }) => {
+  
+  
+  
   return (
     <div>
       <CursorDot
@@ -50,8 +53,8 @@ const CursorDot = styled.div.attrs((props) => ({
 `
 const CursorRing = styled.div.attrs((props) => ({
   style: {
-    transform: `translate(${props.x - props.ringSize / 2.2}px, ${
-      props.y - props.ringSize / 2.2
+    transform: `translate(${props.x - props.ringSize / 2.25}px, ${
+      props.y - props.ringSize / 2.25
     }px)`
   }
 }))`

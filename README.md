@@ -7,12 +7,12 @@
 ## Install
 
 ```bash
-npm install --save react-cursor
+npm install --save react-cursor-custom
 ```
 or
 
 ```bash
-yarn add react-cursor
+yarn add react-cursor-custom
 ```
 
 ## Usage

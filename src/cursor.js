@@ -40,11 +40,11 @@ const CursorDot = styled.div.attrs((props) => ({
     transform: `translate(${props.x}px, ${props.y}px)`
   }
 }))`
-  width: ${(props) => (props.dotSize ? props.dotSize + 'px' : '8px')};
-  height: ${(props) => (props.dotSize ? props.dotSize + 'px' : '8px')};
+  width: ${(props) => (`${props.dotSize || 8}px`)};
+  height: ${(props) => (`${props.dotSize || 8}px`)};
   position: absolute;
   transform: translate(-50%, -50%);
-  background: ${(props) => (props.color ? props.color : 'black')};
+  background: ${(props) => props.color || 'black'};
   z-index: 999;
   border-radius: 100%;
   pointer-events: none;
@@ -53,20 +53,17 @@ const CursorDot = styled.div.attrs((props) => ({
 `
 const CursorRing = styled.div.attrs((props) => ({
   style: {
-    transform: `translate(${props.x - props.ringSize / 2.25}px, ${
-      props.y - props.ringSize / 2.25
-    }px)`
+    transform: `translate(
+        ${props.x + (props.dotSize || 8 - props.ringSize) / 2}px,
+        ${props.y + (props.dotSize || 8 - props.ringSize) / 2}px
+    )`
   }
 }))`
-  width: ${(props) => (props.ringSize ? props.ringSize + 'px' : '36px')};
-  height: ${(props) => (props.ringSize ? props.ringSize + 'px' : '36px')};
+  width: ${(props) => (`${props.ringSize|| 36}px`)};
+  height: ${(props) => (`${props.ringSize|| 36}px`)};
   border-radius: 100%;
-  border: ${(props) =>
-    props.color ? `2px solid ${props.color}` : '2px solid black'};
-  transition: ${(props) =>
-    props.transitionTime
-      ? `transform ${props.transitionTime}ms ease-out`
-      : 'transform 0.1s ease-out'};
+  border: ${(props) => `2px solid ${props.color || 'black'}`};
+  transition: ${(props) => `transform ${props.transitionTime || 100}ms ease-out`};
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 999;
